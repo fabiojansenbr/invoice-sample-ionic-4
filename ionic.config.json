@@ -1,5 +1,7 @@
 {
   "name": "invoice-sample-ionic-4",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

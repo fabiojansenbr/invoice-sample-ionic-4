@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Customer Details</ion-title>
+    <ion-button *ngIf="canDelete" (click)="delete()">
+        <ion-icon name="trash" slot="end"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>FirstName</ion-label>
+      <ion-input text-right type="text" [(ngModel)]="customer.firstName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>LastName</ion-label>
+      <ion-input text-right type="text" [(ngModel)]="customer.lastName"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button block (click)="addOrUpdate()">Add or Update Customer</button>
+</ion-content>

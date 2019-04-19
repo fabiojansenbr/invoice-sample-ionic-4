@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Items</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    Invoice_ID : {{invoice_ID}}
+  </ion-item>
+  <ion-grid padding>
+      <ion-row>
+          <ion-col size="2"><b>Product Name</b></ion-col>
+          <ion-col size="2"><b>Product ID</b></ion-col>
+          <ion-col size="2"><b>Quantity</b></ion-col>
+          <ion-col size="2"><b>Price</b></ion-col>
+          <ion-col size="2"><b>Tax</b></ion-col>
+          <ion-col size="2"><b>Amount</b></ion-col>
+      </ion-row>
+    <ion-row *ngFor="let item of items">
+      <ion-col size="2">{{ item.i_Product }}</ion-col>
+      <ion-col size="2">{{ item.i_Product_ID }}</ion-col>
+      <ion-col size="2">{{ item.i_Quantity }}</ion-col>
+      <ion-col size="2">{{ item.i_Latest_price }}</ion-col>
+      <ion-col size="2">{{ item.i_Updated_tax }}</ion-col>
+      <ion-col size="2">{{ item.i_Amount }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="8"></ion-col>
+      <ion-col size="2"><b>Total</b></ion-col>
+      <ion-col size="2"><b>{{ total }}</b></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
