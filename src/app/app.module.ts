@@ -20,7 +20,10 @@ import { SQLite } from "@ionic-native/sqlite/ngx";
 import { SQLitePorter } from "@ionic-native/sqlite-porter/ngx";
 
 import { CustomerDetailPageModule } from './customer-detail/customer-detail.module';
+import { AddCustomerPageModule } from './add-customer/add-customer.module';
 
+import { FormsModule } from "@angular/forms"
+import { HttpClient } from '@angular/common/http';
 
 
 @NgModule({
@@ -32,7 +35,11 @@ import { CustomerDetailPageModule } from './customer-detail/customer-detail.modu
     AppRoutingModule,
     HttpModule,
     IonicStorageModule.forRoot(),
-    CustomerDetailPageModule
+    CustomerDetailPageModule,
+    AddCustomerPageModule,
+    FormsModule,
+    HttpClient, 
+
   ],
   providers: [
     StatusBar,

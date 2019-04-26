@@ -1,8 +1,8 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Customers Database</ion-title>
-    <ion-button (click)="addCustomer()">
-          <ion-icon slot="end" name="add"></ion-icon>
+    <ion-button slot="end" (click)="addCustomer()">
+          <ion-icon name="add"></ion-icon>
     </ion-button>    
   </ion-toolbar>
 </ion-header>
@@ -11,6 +11,7 @@
 
     <ion-list>
         <ion-item *ngFor="let cust of customers" (click)="showDetails(customer)">
+          {{customers}}
         </ion-item>
     </ion-list>
 

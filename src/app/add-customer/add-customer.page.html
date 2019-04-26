@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Customer Info</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #customerForm="ngForm" (ngSubmit)="addCustomer(customerForm)" >
+    <ion-item>
+      <ion-label stacked>FirstName</ion-label>
+      <ion-input text-right type="text" name="firstName" #firstName="ngModel" ngModel></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>LastName</ion-label>
+      <ion-input text-right type="text" name="lastName" #lastName="ngModel" ngModel></ion-input>
+    </ion-item>
+  <ion-button expand="block" type="submit">Add Info</ion-button>
+  </form>
+</ion-content>
